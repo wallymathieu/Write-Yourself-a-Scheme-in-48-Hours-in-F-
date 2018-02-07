@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:HeaderFooterSprite,0:Header.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=C9973DA951AE6202C9B348379A1BE49D" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/b79636be-b088-48b5-8a8d-c21645d26d2fCombined.css,0:HeaderFooterSprite,0:Footer.NonMtps,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;hashKey=F576C687BC536B84D6E5B3246EE39B49" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Write Yourself a Scheme in 48 Hours in F#</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Write Yourself a Scheme in 48 Hours in F#</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Lisp, Scheme
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            F# Language, Lisp, Scheme
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Web, Cloud, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/11/2011</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Write-Yourself-a-Scheme-in-d50ae449">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<p>It is a Scheme interpreter that includes a REPL window.&nbsp;<strong><span>You need to download FParsec separately.</span></strong></p>
+<p>All the smarts for it come from&nbsp;<a href="http://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours">this Wiki Book</a>. I just ported the code to F# (and modified it a bit). I thought the comparison might be interesting, so here we go. Thanks
+ to&nbsp;<a href="http://gedell.net/">Tobias</a>&nbsp;and&nbsp;<a href="http://www.haskellers.com/user/pepeiborra">Jose</a>&nbsp;for reviewing the code, find one bug and suggest improvements.</p>
+<p>The code is described in the series of blog posts starting&nbsp;<a href="http://lucabolognese.wordpress.com/2011/06/30/write-yourself-a-scheme-in-48-hours-in-f-part-i/">here</a>.</p>
+<p>Before we start looking at the real code, here is what we are trying to accomplish in form of test cases. If you are a bit rusty on LISP syntax, you might want to try and see if you understand what it does.</p>
+<p>Our goal is to make all this XUnit test cases pass. Each of the lists below contains the Scheme statement and the result to display in the REPL window.</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>F#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<div class="preview">
+<pre class="js">open&nbsp;Xunit&nbsp;
+open&nbsp;Lisp.Repl&nbsp;
+open&nbsp;Lisp.Parser&nbsp;
+open&nbsp;Lisp.SymbolTable&nbsp;
+&nbsp;
+let&nbsp;<span class="js__function">eval</span>&nbsp;env&nbsp;=&nbsp;evalString&nbsp;env&nbsp;&gt;&gt;&nbsp;showVal&nbsp;
+let&nbsp;initEnv&nbsp;()&nbsp;=&nbsp;primitiveBindings&nbsp;()&nbsp;|&gt;&nbsp;loadStdLib&nbsp;
+&nbsp;
+let&nbsp;test&nbsp;tests&nbsp;=&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;env&nbsp;=&nbsp;initEnv&nbsp;()&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;tests&nbsp;|&gt;&nbsp;List.iter&nbsp;(fun&nbsp;(expr,&nbsp;result)&nbsp;-&gt;&nbsp;Assert.Equal(result,&nbsp;<span class="js__function">eval</span>&nbsp;env&nbsp;expr))&nbsp;
+&nbsp;
+[&lt;Fact&gt;]&nbsp;
+let&nbsp;simpleEval()&nbsp;=&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;tests&nbsp;=&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(&#43;&nbsp;2&nbsp;2)&quot;</span>,&nbsp;<span class="js__string">&quot;4&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(&#43;&nbsp;2&nbsp;(-&nbsp;4&nbsp;1))&quot;</span>,&nbsp;<span class="js__string">&quot;5&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(-&nbsp;(&#43;&nbsp;4&nbsp;6&nbsp;3)&nbsp;3&nbsp;5&nbsp;2)&quot;</span>,&nbsp;<span class="js__string">&quot;3&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;test&nbsp;tests&nbsp;
+&nbsp;
+[&lt;Fact&gt;]&nbsp;
+let&nbsp;errorCheck()&nbsp;=&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;tests&nbsp;=&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(&#43;&nbsp;2&nbsp;\&quot;two\&quot;)&quot;</span>,&nbsp;<span class="js__string">&quot;\&quot;Invalid&nbsp;type:&nbsp;expected&nbsp;number,&nbsp;found&nbsp;\&quot;two\&quot;\&quot;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(&#43;&nbsp;2)&quot;</span>,&nbsp;<span class="js__string">&quot;\&quot;Expected&nbsp;2&nbsp;args;&nbsp;found&nbsp;values&nbsp;2\&quot;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(what?&nbsp;2)&quot;</span>,&nbsp;<span class="js__string">&quot;\&quot;Getting&nbsp;an&nbsp;unbound&nbsp;variable:&nbsp;what?\&quot;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;test&nbsp;tests&nbsp;
+&nbsp;
+[&lt;Fact&gt;]&nbsp;
+let&nbsp;moreEval()&nbsp;=&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;tests&nbsp;=&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(&lt;&nbsp;2&nbsp;3)&quot;</span>,&nbsp;<span class="js__string">&quot;#t&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(&gt;&nbsp;2&nbsp;3)&quot;</span>,&nbsp;<span class="js__string">&quot;#f&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(&gt;=&nbsp;3&nbsp;3)&quot;</span>,&nbsp;<span class="js__string">&quot;#t&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(string=?&nbsp;\&quot;test\&quot;&nbsp;\&quot;test\&quot;)&quot;</span>,&nbsp;<span class="js__string">&quot;#t&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(string=?&nbsp;\&quot;abcd\&quot;&nbsp;\&quot;dsft\&quot;)&quot;</span>,&nbsp;<span class="js__string">&quot;#f&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(if&nbsp;(&gt;&nbsp;2&nbsp;3)&nbsp;\&quot;no\&quot;&nbsp;\&quot;yes\&quot;)&quot;</span>,&nbsp;<span class="js__string">&quot;\&quot;yes\&quot;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(if&nbsp;(=&nbsp;3&nbsp;3)&nbsp;(&#43;&nbsp;2&nbsp;3&nbsp;(-&nbsp;5&nbsp;1))&nbsp;\&quot;unequal\&quot;)&quot;</span>,&nbsp;<span class="js__string">&quot;9&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(cdr&nbsp;'(a&nbsp;simple&nbsp;test))&quot;</span>,&nbsp;<span class="js__string">&quot;(simple&nbsp;test)&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(car&nbsp;(cdr&nbsp;'(a&nbsp;simple&nbsp;test)))&quot;</span>,&nbsp;<span class="js__string">&quot;simple&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(car&nbsp;'((this&nbsp;is)&nbsp;a&nbsp;test))&quot;</span>,&nbsp;<span class="js__string">&quot;(this&nbsp;is)&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(cons&nbsp;'(this&nbsp;is)&nbsp;'test)&quot;</span>,&nbsp;<span class="js__string">&quot;((this&nbsp;is)&nbsp;.&nbsp;test)&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(cons&nbsp;'(this&nbsp;is)&nbsp;'())&quot;</span>,&nbsp;<span class="js__string">&quot;((this&nbsp;is))&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(eqv?&nbsp;1&nbsp;3)&quot;</span>,&nbsp;<span class="js__string">&quot;#f&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(eqv?&nbsp;3&nbsp;3)&quot;</span>,&nbsp;<span class="js__string">&quot;#t&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(eqv?&nbsp;'atom&nbsp;'atom)&quot;</span>,&nbsp;<span class="js__string">&quot;#t&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;test&nbsp;tests&nbsp;
+&nbsp;
+[&lt;Fact&gt;]&nbsp;
+let&nbsp;assignement()&nbsp;=&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;tests&nbsp;=&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(define&nbsp;x&nbsp;3)&quot;</span>,&nbsp;<span class="js__string">&quot;3&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(&#43;&nbsp;x&nbsp;2)&quot;</span>,&nbsp;<span class="js__string">&quot;5&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(&#43;&nbsp;y&nbsp;2)&quot;</span>,&nbsp;<span class="js__string">&quot;\&quot;Getting&nbsp;an&nbsp;unbound&nbsp;variable:&nbsp;y\&quot;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(define&nbsp;y&nbsp;5)&quot;</span>,&nbsp;<span class="js__string">&quot;5&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(&#43;&nbsp;x&nbsp;(-&nbsp;y&nbsp;2))&quot;</span>,&nbsp;<span class="js__string">&quot;6&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(define&nbsp;str&nbsp;\&quot;A&nbsp;string\&quot;)&quot;</span>,&nbsp;<span class="js__string">&quot;\&quot;A&nbsp;string\&quot;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(&lt;&nbsp;str&nbsp;\&quot;The&nbsp;string\&quot;)&quot;</span>,&nbsp;<span class="js__string">&quot;\&quot;Invalid&nbsp;type:&nbsp;expected&nbsp;number,&nbsp;found&nbsp;\&quot;A&nbsp;string\&quot;\&quot;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(string&lt;?&nbsp;str&nbsp;\&quot;The&nbsp;string\&quot;)&quot;</span>,&nbsp;<span class="js__string">&quot;#t&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;test&nbsp;tests&nbsp;
+&nbsp;
+[&lt;Fact&gt;]&nbsp;
+let&nbsp;closure()&nbsp;=&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;tests&nbsp;=&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(define&nbsp;(f&nbsp;x&nbsp;y)&nbsp;(&#43;&nbsp;x&nbsp;y))&quot;</span>,&nbsp;<span class="js__string">&quot;(lambda&nbsp;(\&quot;x\&quot;&nbsp;\&quot;y\&quot;)&nbsp;...)&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(f&nbsp;1&nbsp;2)&quot;</span>,&nbsp;<span class="js__string">&quot;3&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(f&nbsp;1&nbsp;2&nbsp;3)&quot;</span>,&nbsp;<span class="js__string">&quot;\&quot;Expected&nbsp;2&nbsp;args;&nbsp;found&nbsp;values&nbsp;1&nbsp;2&nbsp;3\&quot;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(define&nbsp;(factorial&nbsp;x)&nbsp;(if&nbsp;(=&nbsp;x&nbsp;1)&nbsp;1&nbsp;(*&nbsp;x&nbsp;(factorial&nbsp;(-&nbsp;x&nbsp;1)))))&quot;</span>,&nbsp;<span class="js__string">&quot;(lambda&nbsp;(\&quot;x\&quot;)&nbsp;...)&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(factorial&nbsp;10)&quot;</span>,&nbsp;<span class="js__string">&quot;3628800&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(define&nbsp;(counter&nbsp;inc)&nbsp;(lambda&nbsp;(x)&nbsp;(set!&nbsp;inc&nbsp;(&#43;&nbsp;x&nbsp;inc))&nbsp;inc))&quot;</span>,&nbsp;<span class="js__string">&quot;(lambda&nbsp;(\&quot;inc\&quot;)&nbsp;...)&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(define&nbsp;my-count&nbsp;(counter&nbsp;5))&quot;</span>,&nbsp;<span class="js__string">&quot;(lambda&nbsp;(\&quot;x\&quot;)&nbsp;...)&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(my-count&nbsp;3)&quot;</span>,&nbsp;<span class="js__string">&quot;8&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(my-count&nbsp;6)&quot;</span>,&nbsp;<span class="js__string">&quot;14&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(my-count&nbsp;5)&quot;</span>,&nbsp;<span class="js__string">&quot;19&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;test&nbsp;tests&nbsp;
+&nbsp;
+[&lt;Fact&gt;]&nbsp;
+let&nbsp;predefinedFunctions()&nbsp;=&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;tests&nbsp;=&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(map&nbsp;(curry&nbsp;&#43;&nbsp;2)&nbsp;'(1&nbsp;2&nbsp;3&nbsp;4))&quot;</span>,&nbsp;<span class="js__string">&quot;(3&nbsp;4&nbsp;5&nbsp;6)&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(filter&nbsp;even?&nbsp;'(1&nbsp;2&nbsp;3&nbsp;4))&quot;</span>,&nbsp;<span class="js__string">&quot;(2&nbsp;4)&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;test&nbsp;tests&nbsp;
+&nbsp;
+[&lt;Fact&gt;]&nbsp;
+let&nbsp;varargsCountCheck()&nbsp;=&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;tests&nbsp;=&nbsp;[&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(define&nbsp;(sum&nbsp;x&nbsp;y&nbsp;.&nbsp;lst)&nbsp;(fold&nbsp;&#43;&nbsp;(*&nbsp;x&nbsp;y)&nbsp;lst))&quot;</span>,&nbsp;<span class="js__string">&quot;(lambda&nbsp;(\&quot;x\&quot;&nbsp;\&quot;y\&quot;&nbsp;.&nbsp;lst)&nbsp;...)&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(sum&nbsp;1&nbsp;2&nbsp;3)&quot;</span>,&nbsp;<span class="js__string">&quot;5&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(sum&nbsp;1&nbsp;1&nbsp;1)&quot;</span>,&nbsp;<span class="js__string">&quot;2&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(sum&nbsp;1&nbsp;2)&quot;</span>,&nbsp;<span class="js__string">&quot;2&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__string">&quot;(sum&nbsp;1)&quot;</span>,&nbsp;<span class="js__string">&quot;\&quot;Expected&nbsp;2&nbsp;args;&nbsp;found&nbsp;values&nbsp;1\&quot;&quot;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;test&nbsp;tests</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><strong>&nbsp;From here on just trying to make the tool happy by having enough chars in the description. Just pasting the second blog post on the topic &nbsp;:-(</strong>
+<p>Usually, when I do blog posts that are all about code, I write them &lsquo;bottom up&rsquo;. I start talking about the most primitive types and functions and build up from there toward higher abstractions. I think this is a pretty common way of doing it.</p>
+<p>For this series I&rsquo;m going to try the opposite. I start with the code that creates the REPL window and move down from there toward the guts of the interpreter. I hold the opinion that, if the code is written right, this should be ok. The naming scheme
+ and general structure of it should allow understanding it at different levels.</p>
+<p>Or at least I hope so.</p>
+<p>Let&rsquo;s start from the&nbsp;<em>main</em>&nbsp;function. Depending on the number of arguments it either runs the REPL window or executes whatever is in the file passed in as the first argument using the other arguments as parameters.</p>
+<pre class="code">[&lt;EntryPoint&gt;]
+<span>let </span>main(args: string[]) =
+    <span>match </span>Array.toList args <span>with
+    </span>| [] <span>-&gt; </span>runRepl ()
+    | filename :: args <span>-&gt; </span>runOne filename args
+    0</pre>
+<p>The latter case is coded in the below function. It first load all the primitive operators (i.e. &lsquo;&#43;&rsquo;, &lsquo;-&lsquo; etc&hellip;) and the standard library. The word &lsquo;load&rsquo; above is a little misleading. In reality it adds them to the
+ environment. It then proceeds to add the arguments that were passed on. As the last step, it evaluates the &lsquo;load&rsquo; command by using the newly created environment, it transforms the returned token to a string and prints it.</p>
+<pre class="code"><span>let </span>runOne (filename : string) (args : list&lt;string&gt;) =
+    <span>let </span>env = primitiveBindings ()
+                |&gt; loadStdLib
+                |&gt; bindVars [ <span>&quot;args&quot;</span>, List (List.map String args) ]
+    List [Atom <span>&quot;load&quot;</span>; String filename] |&gt; eval env |&gt; showVal |&gt; printStr</pre>
+<p>Running the REPL windows is equally simple. Load the primitive operators and the standard library, show a prompt and evaluate the input until the input is &lsquo;Quit&rsquo;.</p>
+<pre class="code"><span>let </span>runRepl () =
+    <span>let </span>env = primitiveBindings () |&gt; loadStdLib
+    until (<span>fun </span>s <span>-&gt; </span>s = <span>&quot;Quit&quot; </span>|| s = <span>&quot;quit&quot;</span>) (<span>fun </span>() <span>-&gt; </span>readPrompt <span>&quot;Lisp&gt;&gt;&gt; &quot;</span>) (evalAndPrint env)</pre>
+<p><em>readPrompt</em>&nbsp;is pretty simple:</p>
+<pre class="code"><span>let </span>printStr (s: string) = Console.Write(s)
+
+<span>let </span>readPrompt (s: string) = printStr s ; Console.ReadLine ()</pre>
+<p><em>EvalAndPrint</em>&nbsp;is written as a chain of functions (lookup the &lsquo;&gt;&gt;&rsquo; operator in F#) and just evaluate the string, transform the result to a string, prints it and newline it.</p>
+<pre class="code"><span>let </span>newLine () = Console.WriteLine()
+
+<span>let </span>evalAndPrint env = evalString env &gt;&gt; showVal &gt;&gt; printStr &gt;&gt; newLine</pre>
+<p><em>evalString</em>&nbsp;parses the string and evaluates the expression. Note the exception management. This is a result of my decision of throwing an exception every time something goes wrong instead of using a monad to pass the state around. I think it
+ is pretty clear, but haskellers might disagre. This is one of the main differences from the Haskell version.</p>
+<pre class="code"><span>let </span>evalString env expr =
+    <span>try
+        </span>expr |&gt; readExpr |&gt; eval env
+    <span>with
+    </span>| LispException(error) <span>-&gt; </span>String (showError error)</pre>
+<p>For the sake of completeness, here is&nbsp;<em>until</em>. Maybe there is a library function somewhere that I could have used?</p>
+<pre class="code"><span>let rec </span>until pred prompter evaluator =
+    <span>let </span>result = prompter ()
+    <span>if </span>not (pred result) <span>then
+        </span>evaluator result
+        until pred prompter evaluator</pre>
+<p>Back on the main flow of the code,&nbsp;<em>loadStdLib</em>&nbsp;just loads the standard file and returns the populated environment.</p>
+<pre class="code"><span>let </span>loadStdLib env =
+    eval env (List [Atom <span>&quot;load&quot;</span>; String <span>&quot;stdlib.scm&quot;</span>]) |&gt; ignore
+    env</pre>
+<p>primitiveBindings creates a new empty environment and adds a bunch of pairs (primitiveName, LispVal &ndash;&gt; LispVal). LispVal is a representation of a Scheme expression, so the second part of the tuple is simply a reduction from one expression to another
+ (hopefully simpler in some sense). We&rsquo;ll talk more about LispVal in upcoming posts.</p>
+<pre class="code"><span>let </span>primitiveBindings () =
+    (nullEnv ()) |&gt; bindVars [ <span>for </span>v, f <span>in </span>primitives <span>-&gt; </span>v, PrimitiveFunc f ] </pre>
+<p>There you have it. That&rsquo;s the full implementation for the REPL window. Next post, we&rsquo;ll look at LispEval and the evaluator.</p>
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>
