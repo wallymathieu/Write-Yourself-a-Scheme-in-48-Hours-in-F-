@@ -50,7 +50,7 @@ module Repl =
 
     // 10. Calling eval to evaluate the load method
     let loadStdLib env =
-        eval env (List [Atom "load"; String "stdlib.scm"]) |> ignore
+        eval env (List [Atom "load"; String <| System.IO.Path.Combine [| "src"; "FsSchemer"; "stdlib.scm" |] ]) |> ignore
         env
         //printfn "StdLib loaded ..."
 
