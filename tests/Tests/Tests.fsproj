@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-   <ProjectReference Include="../../src/Write_Yourself_a_Scheme_in_48_Hours_in_F_/Write_Yourself_a_Scheme_in_48_Hours_in_F_.fsproj" />
+    <ProjectReference Include="../../src/FsSchemer/FsSchemer.fsproj" />
     <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="1.0.0" />
     <DotNetCliToolReference Include="dotnet-mono" Version="[0.3.4]" />
   </ItemGroup>

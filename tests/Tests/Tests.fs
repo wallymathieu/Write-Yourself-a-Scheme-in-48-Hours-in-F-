@@ -3,12 +3,14 @@ module Tests
 
 open Expecto
 open Lisp
+open Repl
+open Parser
 let eval env = evalString env >> showVal
 let initEnv () = primitiveBindings () |> loadStdLib
 
 let test tests =
     let env = initEnv ()
-    tests |> List.iter (fun (expr, result) -> Assert.Equal(result, eval env expr))
+    tests |> List.iter (fun (expr, result) -> Expect.equal result (eval env expr) "Should match expected result")
 
 
 [<Tests>]
