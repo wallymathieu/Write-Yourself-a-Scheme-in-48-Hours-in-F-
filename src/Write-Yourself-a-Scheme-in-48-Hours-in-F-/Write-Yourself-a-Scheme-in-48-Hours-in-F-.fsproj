@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.0;net461</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <Title>Write_Yourself_a_Scheme_in_48_Hours_in_F_</Title>
+    <Description>Write_Yourself_a_Scheme_in_48_Hours_in_F_ does the thing!</Description>
+    <!-- summary is not migrated from project.json, but you can use the <Description> property for that if needed. -->
+    <PackageTags>f#, fsharp</PackageTags>
+    <PackageProjectUrl>https://github.com/wallymathieu/Write_Yourself_a_Scheme_in_48_Hours_in_F_</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/wallymathieu/Write_Yourself_a_Scheme_in_48_Hours_in_F_/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <Authors>MyUsername</Authors>
+    <RepositoryUrl>https://github.com/wallymathieu/Write_Yourself_a_Scheme_in_48_Hours_in_F_</RepositoryUrl>
+    <!-- owners is not supported in MSBuild -->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <Optimize>true</Optimize>
+    <Tailcalls>true</Tailcalls>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Ast.fs" />
+    <Compile Include="Parser.fs" />
+    <Compile Include="Errors.fs" />
+    <Compile Include="SymbolTable.fs" />
+    <Compile Include="Eval.fs" />
+    <None Include="stdlib.scm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Repl.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FParsec" Version="1.0.3" />
+    <PackageReference Include="FSharp.Core" Version="4.2.*" />
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.7.3" PrivateAssets="All" /> 
+  </ItemGroup>
+
+
+
+</Project>
